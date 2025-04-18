@@ -6,9 +6,9 @@ import userRouter from './routes/userRoutes';
 
 dotenv.config()
 const app = express();
- 
-app.use(cookieParser)
+
 app.use(express.json())
+app.use(cookieParser)
 app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
